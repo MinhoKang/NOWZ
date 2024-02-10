@@ -16,13 +16,13 @@ const Nav = () => {
     { title: '학생 정보', icon: faGraduationCap, link: '/' },
     { title: '대시보드', icon: faChartLine, link: '/' },
     { title: '센터 규칙', icon: faScaleBalanced, link: '/' },
-    { title: '일일관찰', icon: faEye, link: '/' },
+    { title: '일일관찰', icon: faEye, link: '/dailyObserve' },
     { title: '상담 내용', icon: faComment, link: '/' },
   ];
 
   return (
     <NavBar>
-      <Logo>Z</Logo>
+      <Logo onClick={() => navi('/')}>Z</Logo>
 
       <MenuList>
         {menu.map((item, index) => (
@@ -52,6 +52,7 @@ const Logo = styled.div`
   align-items: center;
   font-size: 40px;
   font-weight: bold;
+  cursor: pointer;
 `;
 
 const MenuList = styled.ul`

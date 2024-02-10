@@ -7,8 +7,9 @@ import Home from './pages/Home';
 import StudentInfo from './pages/StudentInfo';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faComments } from '@fortawesome/free-solid-svg-icons';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import ConsultMadal from './components/ConsultMadal';
+import DailyObserve from './pages/DailyObserve';
 
 function App() {
   const [isClick, setIsClick] = useState(false);
@@ -29,6 +30,7 @@ function App() {
           <Routes>
             <Route path="/" index element={<Home />} />
             <Route path="/student/:id" element={<StudentInfo />} />
+            <Route path="/dailyObserve" element={<DailyObserve />} />
           </Routes>
         </AppContainer>
       </NavContainer>
