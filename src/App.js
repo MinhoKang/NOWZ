@@ -10,6 +10,7 @@ import { faComments } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
 import ConsultMadal from './components/ConsultMadal';
 import DailyObserve from './pages/DailyObserve';
+import SubmitDailyObserve from './pages/SubmitDailyObserve';
 
 function App() {
   const [isClick, setIsClick] = useState(false);
@@ -31,6 +32,7 @@ function App() {
             <Route path="/" index element={<Home />} />
             <Route path="/student/:id" element={<StudentInfo />} />
             <Route path="/dailyObserve" element={<DailyObserve />} />
+            <Route path="/submitDailyObserve" element={<SubmitDailyObserve />} />
           </Routes>
         </AppContainer>
       </NavContainer>
@@ -54,6 +56,7 @@ const AppContainer = styled.div`
   flex-direction: column;
   overflow-x: hidden;
   position: relative;
+  width: 100vw;
 `;
 
 const Consult = styled.div`
