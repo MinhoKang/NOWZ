@@ -215,6 +215,120 @@ let dailyAnswerSlice = createSlice({
   },
 });
 
+let studentDetailsSlice = createSlice({
+  name: 'studentDetails',
+  initialState: [
+    {
+      title: '기본 정보',
+      detail: [
+        { title: '이름', value: '홍길동' },
+        { title: '생년월일', value: '2009.11.01' },
+        { title: '등록일', value: '2023.1.21' },
+      ],
+    },
+    {
+      title: '주소 및 연락처',
+      detail: [
+        { title: '주소', value: '서울 강남구 논현로63길 16' },
+        { title: '연락처(학생)', value: '010-1111-1234' },
+        { title: '연락처(부)', value: '010-2222-1234' },
+        { title: '연락처(모)', value: '010-3333-1234' },
+        { title: '연락처(집)', value: '070-4444-1234' },
+      ],
+    },
+    {
+      title: '주요 정보',
+      detail: [
+        { title: '현재 센터 단계', value: '매니징' },
+        { title: '등록 상태', value: '진행' },
+        { title: '특수 상황', value: '해당 없음' },
+        { title: '담당 플레이어', value: '강민호' },
+      ],
+    },
+    {
+      title: '학습 정보',
+      detail: [
+        { title: '학습 수준', value: '고1' },
+        { title: '계열', value: '인문' },
+        { title: '목표 대학', value: '중앙대학교' },
+        { title: '목표 학과', value: '교육학과' },
+        { title: '국어 선택', value: '언어와 매체' },
+        { title: '수학 선택', value: '기하와 벡터' },
+        { title: '탐구 1', value: '사회문화' },
+        { title: '탐구 1', value: '물리1' },
+        { title: '목표시간(국어)', value: '3' },
+        { title: '목표시간(수학)', value: '4' },
+        { title: '목표시간(영어)', value: '2' },
+        { title: '목표시간(탐구)', value: '1' },
+        { title: '목표시간(진로)', value: '0' },
+        { title: '목표시간(운동)', value: '0' },
+      ],
+    },
+    {
+      title: '생활 및 부가정보',
+      detail: [
+        {
+          title: '등원일',
+          value: {
+            월요일: true,
+            화요일: true,
+            수요일: true,
+            목요일: true,
+            금요일: true,
+            토요일: false,
+            일요일: true,
+          },
+        },
+        {
+          title: '목표 취침',
+          value: {
+            weekdays: '23:30',
+            weekends: '1:00',
+          },
+        },
+        {
+          title: '목표 기상',
+          value: {
+            weekdays: '8:30',
+            weekends: '10:00',
+          },
+        },
+        {
+          title: '목표 등원',
+          value: {
+            weekdays: '10:30',
+            weekends: '13:00',
+          },
+        },
+        {
+          title: '식비 제한',
+          value: '11000',
+        },
+        {
+          title: '용돈 제한',
+          value: '18000',
+        },
+      ],
+    },
+    {
+      title: '용돈 규칙',
+      detail: [
+        { title: '정시 등원', value: '3000' },
+        { title: '방정리', value: '1000' },
+        { title: '국어', value: '3000' },
+        { title: '수학', value: '3000' },
+        { title: '영어', value: '3000' },
+        { title: '운동', value: '3000' },
+      ],
+    },
+  ],
+  reducers: {
+    studentDetails: (state, action) => {
+      state.studentDetails = action.payload;
+    },
+  },
+});
+
 export const { toggleAccordionItem } = accordionMenuSlice.actions;
 
 export default configureStore({
@@ -222,5 +336,6 @@ export default configureStore({
     accordionMenu: accordionMenuSlice.reducer,
     dailyObserve: dailyObserveSlice.reducer,
     dailyAnswer: dailyAnswerSlice.reducer,
+    studentDetails: studentDetailsSlice.reducer,
   },
 });

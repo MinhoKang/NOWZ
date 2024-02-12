@@ -11,6 +11,8 @@ import { useState } from 'react';
 import ConsultMadal from './components/ConsultMadal';
 import DailyObserve from './pages/DailyObserve';
 import SubmitDailyObserve from './pages/SubmitDailyObserve';
+import SubmitComplete from './pages/SubmitComplete';
+import DashBoard from './pages/DashBoard';
 
 function App() {
   const [isClick, setIsClick] = useState(false);
@@ -33,6 +35,8 @@ function App() {
             <Route path="/student/:id" element={<StudentInfo />} />
             <Route path="/dailyObserve" element={<DailyObserve />} />
             <Route path="/submitDailyObserve" element={<SubmitDailyObserve />} />
+            <Route path="/submitComplete" element={<SubmitComplete />} />
+            <Route path="/dashboard" element={<DashBoard />} />
           </Routes>
         </AppContainer>
       </NavContainer>
@@ -69,4 +73,8 @@ const Consult = styled.div`
   background-image: linear-gradient(to top, #60c3e6, #a8dbec);
   border-radius: 50%;
   z-index: 20;
+  color: #f9fefd;
+  &:hover {
+    color: #3f4e8a;
+  }
 `;

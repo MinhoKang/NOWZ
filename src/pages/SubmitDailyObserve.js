@@ -10,7 +10,6 @@ const SubmitDailyObserve = () => {
   return (
     <Container>
       <DailyForm />
-      {}
     </Container>
   );
 };

@@ -13,12 +13,12 @@ const AccordionItem = ({ item }) => {
   console.log(item.text);
   console.log(item);
   return (
-    <AccordionContainer>
-      <AccordionHeader>
+    <AccordionContainer isOpen={item.isOpen}>
+      <AccordionHeader isOpen={item.isOpen}>
         <h3>{item.title}</h3>
-        <p>
+        <ToggleIcon isOpen={item.isOpen}>
           <FontAwesomeIcon icon={item.isOpen ? faCaretUp : faCaretDown} onClick={handleToggle} />
-        </p>
+        </ToggleIcon>
       </AccordionHeader>
       {item.isOpen && (
         <AccordionContent>
@@ -39,6 +39,8 @@ const AccordionContainer = styled.div`
   width: 800px;
   border-radius: 20px;
   padding: 10px;
+  border: 2px solid ${(props) => (props.isOpen ? '#5ec3e6' : 'transparent')};
+  box-shadow: 0px 0px 5px 0px gray;
 `;
 
 const AccordionHeader = styled.div`
@@ -47,13 +49,19 @@ const AccordionHeader = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 15px;
-  > p {
-    font-size: 20px;
-    cursor: pointer;
-    padding: 5px;
+  > h3 {
+    color: ${(props) => (props.isOpen ? '#5ec3e6' : 'black')};
   }
 `;
 
 const AccordionContent = styled.div`
   padding: 10px;
+  transition: all 1s;
+`;
+
+const ToggleIcon = styled.div`
+  font-size: 20px;
+  cursor: pointer;
+  padding: 5px;
+  color: ${(props) => (props.isOpen ? '#5ec3e6' : 'black')};
 `;

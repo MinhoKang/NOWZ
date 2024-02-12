@@ -7,6 +7,7 @@ import {
   faScaleBalanced,
   faEye,
   faComment,
+  faCheck,
 } from '@fortawesome/free-solid-svg-icons';
 import { useNavigate } from 'react-router-dom';
 
@@ -14,10 +15,11 @@ const Nav = () => {
   const navi = useNavigate();
   const menu = [
     { title: '학생 정보', icon: faGraduationCap, link: '/' },
-    { title: '대시보드', icon: faChartLine, link: '/' },
+    { title: '대시보드', icon: faChartLine, link: '/dashboard' },
     { title: '센터 규칙', icon: faScaleBalanced, link: '/' },
     { title: '일일관찰', icon: faEye, link: '/dailyObserve' },
     { title: '상담 내용', icon: faComment, link: '/' },
+    { title: '공지사항', icon: faCheck, link: '/' },
   ];
 
   return (
@@ -26,8 +28,9 @@ const Nav = () => {
 
       <MenuList>
         {menu.map((item, index) => (
-          <MenuItem key={index}>
-            <FontAwesomeIcon icon={item.icon} onClick={() => navi(item.link)} />
+          <MenuItem key={index} onClick={() => navi(item.link)}>
+            <FontAwesomeIcon icon={item.icon} />
+            <Title>{item.title}</Title>
           </MenuItem>
         ))}
       </MenuList>
@@ -53,6 +56,7 @@ const Logo = styled.div`
   font-size: 40px;
   font-weight: bold;
   cursor: pointer;
+  color: #5ec3e6;
 `;
 
 const MenuList = styled.ul`
@@ -64,5 +68,21 @@ const MenuItem = styled.li`
   flex-direction: column;
   padding: 20px 10px;
   font-size: 20px;
+  color: #5ec3e6;
   cursor: pointer;
+  &:hover {
+    background-color: #e7ecf0;
+  }
+`;
+
+const Title = styled.p`
+  /* background-color: #5ec3e6; */
+  color: black;
+  border-radius: 5px;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8px;
+  font-weight: bold;
 `;

@@ -4,20 +4,34 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBell, faCalendar, faUser } from '@fortawesome/free-solid-svg-icons';
 
 const Nav2 = () => {
+  const navList = [
+    {
+      id: 1,
+      icon: faCalendar,
+      title: '캘린더',
+    },
+    {
+      id: 2,
+      icon: faBell,
+      title: '알림',
+    },
+    {
+      id: 3,
+      icon: faUser,
+      title: '마이 페이지',
+    },
+  ];
   return (
     <NavContainer>
       <NavList>
-        <ListItem margin={10}>
-          <FontAwesomeIcon icon={faCalendar} />
-          캘린더
-        </ListItem>
-        <ListItem margin={20}>
-          <FontAwesomeIcon icon={faBell} />
-          알림
-        </ListItem>
-        <ListItem margin={30}>
-          <FontAwesomeIcon icon={faUser} />
-        </ListItem>
+        {navList.map((item, index) => (
+          <ListItem key={index}>
+            <NavIcon>
+              <FontAwesomeIcon icon={item.icon} />
+            </NavIcon>
+            {item.title}
+          </ListItem>
+        ))}
       </NavList>
     </NavContainer>
   );
@@ -40,12 +54,18 @@ const NavList = styled.ul`
 `;
 
 const ListItem = styled.li`
-  /* margin: 0px; */
-  margin-right: ${(props) => props.margin}px;
+  display: flex;
+  border: 1px solid #e1e3e5;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-right: 14px;
+  font-size: 14px;
+  cursor: pointer;
+  &:hover {
+    background-color: #e1e3e5;
+  }
 `;
-
-const UserImg = styled.img``;
-
-const Button = styled.button`
-  padding: 3px 10px;
+const NavIcon = styled.div`
+  color: #87d0e9;
+  margin-right: 5px;
 `;

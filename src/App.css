@@ -11,3 +11,13 @@ ul {
 h3 {
   margin: 0;
 }
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+h3 {
+  margin: 0px;
+  padding: 0px;
+}
