@@ -1,0 +1,62 @@
+[
+  {
+    "label": "1월",
+    "roadmapLevel": 1,
+    "zScore": 97
+  },
+  {
+    "label": "2월",
+    "roadmapLevel": 2,
+    "zScore": 151
+  },
+  {
+    "label": "3월",
+    "roadmapLevel": 1,
+    "zScore": 120
+  },
+  {
+    "label": "4월",
+    "roadmapLevel": 1,
+    "zScore": 136
+  },
+  {
+    "label": "5월",
+    "roadmapLevel": 3,
+    "zScore": 374
+  },
+  {
+    "label": "6월",
+    "roadmapLevel": 3,
+    "zScore": 389
+  },
+  {
+    "label": "7월",
+    "roadmapLevel": 3,
+    "zScore": 399
+  },
+  {
+    "label": "8월",
+    "roadmapLevel": 2,
+    "zScore": 249
+  },
+  {
+    "label": "9월",
+    "roadmapLevel": 3,
+    "zScore": 361
+  },
+  {
+    "label": "10월",
+    "roadmapLevel": 4,
+    "zScore": 502
+  },
+  {
+    "label": "11월",
+    "roadmapLevel": 4,
+    "zScore": 510
+  },
+  {
+    "label": "12월",
+    "roadmapLevel": 5,
+    "zScore": 648
+  }
+]

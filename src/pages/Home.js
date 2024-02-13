@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
+  faCircle,
   faClock,
   faExclamation,
   faSchool,
@@ -43,7 +44,12 @@ const Home = () => {
               <FontAwesomeIcon icon={faExclamation} onClick={() => setIsClick(true)} />
             </ShowDetail>
           </NameContainer>
-          <div>현재 상태: 공부 중</div>
+          <Badge>
+            <BadgeIcon>
+              <FontAwesomeIcon icon={faCircle} />
+            </BadgeIcon>
+            <p>미등원</p>
+          </Badge>
           <TimeInfo>
             {infoList.map((item, index) => (
               <Item key={index}>
@@ -157,4 +163,28 @@ const Icon = styled.div`
   color: #74cae8;
   font-size: 25px;
   margin-bottom: 5px;
+`;
+
+const Badge = styled.div`
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  font-size: 13px;
+  background-color: #fff3f3;
+  padding: 6px 2px;
+  width: 100px;
+  border-radius: 10px;
+  > p {
+    margin-left: 10px;
+    font-size: 15px;
+    color: #ef5a5c;
+  }
+`;
+
+const BadgeIcon = styled.div`
+  font-size: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ef5a5c;
 `;

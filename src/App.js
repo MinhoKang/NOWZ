@@ -12,7 +12,8 @@ import ConsultMadal from './components/ConsultMadal';
 import DailyObserve from './pages/DailyObserve';
 import SubmitDailyObserve from './pages/SubmitDailyObserve';
 import SubmitComplete from './pages/SubmitComplete';
-import DashBoard from './pages/DashBoard';
+import DashBoard from './pages/dashBoard/DashBoard';
+import Braedcrumbs from './components/Braedcrumbs';
 
 function App() {
   const [isClick, setIsClick] = useState(false);
@@ -30,6 +31,7 @@ function App() {
         <Nav />
         <AppContainer>
           <Nav2 />
+          <Braedcrumbs />
           <Routes>
             <Route path="/" index element={<Home />} />
             <Route path="/student/:id" element={<StudentInfo />} />
