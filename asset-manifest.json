@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/NOWZ/static/css/main.b64590f1.css",
+    "main.js": "/NOWZ/static/js/main.fb1170d4.js",
+    "static/js/592.ff2ed1af.chunk.js": "/NOWZ/static/js/592.ff2ed1af.chunk.js",
+    "index.html": "/NOWZ/index.html",
+    "main.b64590f1.css.map": "/NOWZ/static/css/main.b64590f1.css.map",
+    "main.fb1170d4.js.map": "/NOWZ/static/js/main.fb1170d4.js.map",
+    "592.ff2ed1af.chunk.js.map": "/NOWZ/static/js/592.ff2ed1af.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b64590f1.css",
+    "static/js/main.fb1170d4.js"
+  ]
+}
